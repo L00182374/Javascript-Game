@@ -1,7 +1,119 @@
 #header
 {
+    background-color: rgb(179, 179, 179);
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+    padding: 0 20px;  
+    border-radius: 10px;
+    margin-bottom: 10px
+}
+
+#header h1
+{
+    text-align: center;
+    font-size: 30px;
     margin: auto;
-    width: 100%;
+    padding: 10px;
+}
+
+#startButton, #resetButton
+{
+    background-color: #065709; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: auto;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.1s;   
+}
+
+#startButton:hover, #resetButton:hover
+{
+    transform: scale(1.05); /* Scale up the button on hover */
+}
+
+#startButton:active, #resetButton:active
+{
+    transform: scale(0.95); /* Scale down the button on click */
+}
+
+#startButton:disabled, #resetButton:disabled
+{
+    background-color: #ccc; /* Grey */
+    cursor: not-allowed;
+}
+
+#startButton:disabled:hover, #resetButton:disabled:hover
+{
+    transform: none; /* No scaling on hover when disabled */
+}
+
+#startButton:disabled:active, #resetButton:disabled:active
+{
+    transform: none; /* No scaling on click when disabled */
+}
+
+#piece
+{
+    width: 50px;
     height: 50px;
-    
+    border-radius: 50%;
+    margin: auto;
+}
+
+#board
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 400px;
+    height: 400px;
+    margin-top: 200px;
+}
+
+.row
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.column
+{
+    flex: 50%;
+    padding: 10px;
+    text-align: center;
+}
+
+.whiteCell
+{
+    background-color: rgb(126, 219, 223);
+    width: 50px;
+    height: 50px;
+}
+
+.blackCell
+{
+    background-color: rgb(54, 13, 71);
+    width: 50px;
+    height: 50px;
+}
+
+.piecewhite
+{
+    background-color: white;
+    border: 2px solid black;
+}
+
+.pieceblack
+{
+    background-color: black;
+    border: 2px solid white;
 }
